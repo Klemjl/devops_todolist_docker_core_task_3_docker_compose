@@ -23,7 +23,7 @@ SECRET_KEY = "@e2(yx)v&tgh3_s=0yja-i!dpebxsz^dg47x)-k&kq_3zf*9e*"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
@@ -66,7 +66,7 @@ DATABASES = {
         'NAME': os.environ.get('MYSQL_DATABASE', 'app_db'),
         'USER': os.environ.get('MYSQL_USER', 'app_user'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD', '1234'),
-        'HOST': os.environ.get('MYSQL_HOST', '172.17.0.2'),
+        'HOST': os.environ.get('MYSQL_HOST', 'db'),
         'PORT': os.environ.get('MYSQL_PORT', '3306'),
     }
 }
